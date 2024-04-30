@@ -1,5 +1,5 @@
 # Proyecto de Análisis de Opiniones y Recomendaciones en Yelp y Google Maps
-
+ 
 ## Descripción del Proyecto
 
 Este proyecto se centra en el análisis de opiniones y recomendaciones de usuarios en las plataformas Yelp y Google Maps, con el objetivo de proporcionar información valiosa para la toma de decisiones estratégicas en el ámbito empresarial. Se utilizarán técnicas de procesamiento de lenguaje natural y aprendizaje automático para analizar las opiniones de los usuarios, identificar tendencias y patrones, y generar recomendaciones personalizadas.
