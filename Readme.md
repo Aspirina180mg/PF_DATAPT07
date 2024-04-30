@@ -1,22 +1,61 @@
-# Proyecto de Ciencia de Datos para Steam
+# Proyecto de Análisis de Opiniones y Recomendaciones en Yelp y Google Maps
 
-Este proyecto de ciencia de datos se centra en el análisis de datos relacionados con Steam, la plataforma de distribución de videojuegos de Valve Corporation. El objetivo principal es realizar análisis y extracciones de información relevante para la recomendación de juegos al usuario, entregando más valor a su experiencia en la plataforma, los resultados de estos análisis serán cargados en una API
+## Descripción del Proyecto
 
-## Video de demostración
-[![Watch the video](https://img.youtube.com/vi/wPvSoBxv7Og/maxresdefault.jpg)](https://www.youtube.com/watch?v=wPvSoBxv7Og)
+Este proyecto se centra en el análisis de opiniones y recomendaciones de usuarios en las plataformas Yelp y Google Maps, con el objetivo de proporcionar información valiosa para la toma de decisiones estratégicas en el ámbito empresarial. Se utilizarán técnicas de procesamiento de lenguaje natural y aprendizaje automático para analizar las opiniones de los usuarios, identificar tendencias y patrones, y generar recomendaciones personalizadas.
 
-https://youtu.be/wPvSoBxv7Og
- 
+El Cliente es un conglomerado de empresas de restaurantes y empresas afines
+
+El público del software es tanto turistas como Restaurantes y afines
+
+Para los análisis como el entrenamiento del modelo, se consierará un periodo de 3 años, desde el 2017 al 2019, además, se considerarán las 5 ciudades más turístics y el 20% de los restaurantes mejor puntuados, ésto aplicando la ley de paretto.
+
+## Objetivos del Proyecto
+
+ Recopilación y depuración de datos: Se extraerán datos de las plataformas Yelp y Google Maps, se depurarán y se almacenarán en una base de datos para su posterior análisis.
+- Análisis de sentimientos: Se analizarán las opiniones de los usuarios para identificar sentimientos positivos, negativos y neutros hacia los negocios y establecimientos analizados.
+- Identificación de tendencias: Se utilizarán técnicas de análisis de datos para identificar tendencias y patrones en las opiniones de los usuarios, lo que permitirá a las empresas comprender mejor las necesidades y preferencias de sus clientes.
+- Desarrollo de un sistema de recomendación: Se desarrollará un sistema de recomendación basado en las opiniones de los usuarios, que permitirá a los usuarios descubrir nuevos negocios y establecimientos en función de sus preferencias y experiencias pasadas.
+
+- Predecir los rubros con más crecimiento o decaimiento en un periodo futuro.
+
+- Identificar puntos clave para la instalación de nuevos locales.
+
+- Creación de un sistema de recomendación de restaurantes según gustos u otra información.
+
+- Agregar por lo menos 1 objetivo adicional luego de analizar los datos.
+
+## Tecnologías Utilizadas
+
+- Python: Se utilizará Python como lenguaje de programación principal, junto con las bibliotecas Pandas, NumPy y Scikit-learn para el análisis de datos y el desarrollo de modelos de aprendizaje automático.
+- SQL: Se utilizará SQL para la gestión y manipulación de la base de datos que almacenará los datos recopilados de Yelp y Google Maps.
+- Herramientas de visualización: Se utilizarán herramientas de visualización de datos como Matplotlib y Seaborn para crear visualizaciones informativas y fácilmente comprensibles.
+- Otras tecnologías: Se utilizarán otras tecnologías según sea necesario para el desarrollo y despliegue del proyecto.
+
+## Entregables
+
+- Base de datos depurada y actualizada con datos de Yelp y Google Maps.
+- Informes de análisis detallados que resuman las tendencias y patrones identificados en las opiniones de los usuarios.
+- Sistema de recomendación funcional que proporcione recomendaciones personalizadas a los usuarios.
+- Documentación detallada que describa el proceso de recopilación de datos, análisis realizado y funcionamiento del sistema de recomendación.
+
+## Equipo de Trabajo
+
+Este proyecto será desarrollado por un equipo multidisciplinario de expertos en análisis de datos, aprendizaje automático y desarrollo de software. El equipo trabajará en estrecha colaboración para garantizar la entrega de un producto de alta calidad que cumpla con los objetivos del proyecto.
+
+*Aquí foto del equipo*
+
+
 # Tabla de contenidos
 1. [Cómo Ejecutar el Proyecto](#ejecutar)
 2. [Guía de uso rápido](#usorapido)
-3.  [Data Engineering](#dataengineer)
+3.  [Data Analytics](#dataengineer)
     1. [Repositorio y Conjuntos de Datos](#datos)
     2. [Preprocesamiento de Datos](#preprocesamiento)
     3. [Descripción del Proyecto](#descripcion)
-4. [Funciones de la API](#funciones)
-5. [Deployment y la API](#deploy)
-6. [Archivos Generados](#archivos)
+4. [Análisis de datos](#analisis)
+5. [KPIs](#kpis)
+6. [Pánel de control o Dashboard](#dashboard)
 7. [Contribuciones y Colaboraciones](#contribuciones)
 8. [Links](#links)
 9. [Licencia](#licencia)
@@ -27,117 +66,49 @@ https://youtu.be/wPvSoBxv7Og
 
 ## Cómo Ejecutar el Proyecto 
 
-Para ejecutar el proyecto localmente, sigue estos pasos:
-
-1. Clona el repositorio desde [GitHub](https://github.com/Aspirina180mg/PI01_Misael_Garcia_Torres).
-2. Instala las dependencias del proyecto utilizando el archivo `requirements_jupyter.txt`, abriendo el terminal en la carpeta raíz del proyecto y corriendo el comando `> pip install -r requirements_jupyter.txt` en la consola
-    1. Nota que el proyecto fué creado con Python 3.11.6, se recomienda usar la misma versión.
-3. Ejecuta el archivo `PI01_Misael_Garcia_Torres.ipynb` en un entorno de Jupyter Notebook o Google Colab, éste llamara los archivos csv almacenados en `PI MLOps - STEAM.zip`, si deseas modificar los archivos se recomienda mantener la estructura original para simplificar la operación.
-4. Explora y ejecuta las celdas según sea necesario para realizar análisis y obtener resultados.
-    1. Nota que puedes ejecutar las distintas celdas en el orden que desees y las veces que desees.
-    2. El proyecto fue creado usando Google Colab y la limitación principal era que sólo se contaba con 12.7 GB de memoria RAM.
-5. Prueba la api, utilizando el comando `uvicorn main:app -reload` en la carpeta raíz del proyecto, una vez realizado esto podrás ingresar al localhost para ver la documentación sobre su funcionamiento y probar algunas búsquedas.
-    1. Para probar la api debes ingresar a tu [localhost (127.0.0.1:8000/docs)](127.0.0.1:8000/docs)
-6. Hacer deploy en Render, si posees o te creas una cuenta en [Render](https://render.com/), puedes hacer tu propio deploy de la API.Los ajustes usados para hacer el deploy son los siguientes
-    1. Repositorio de github, debes ingresar el enlace del clon que hiciste al repositorio original.
-    2. Branch del repositori, si no haz modificado esto en el repositorio, será main.
-    3. Directorio Raíz, debes dejarlo en blanco, ya que es el mismo que el propio directorio raíz del repositorio.
-    4. Comando de armado (Build Command), debes escribir `pip install -r requirements.txt` para que lea el archivo requirements.txt del repositorio enlacado en el punto 5.1.
-    5. Comando previo al deploy, no hay, déjalo en blanco
-    6. Comando de inicio, usarás `uvicorn main:app --host 0.0.0.0 --port $PORT` para que el puerto sea dinámico.
-
-
 <a name="usorapido"></a>
 
 ## Guía de uso rápido
 
-Se recomienda sólo agregar información a los archivos originales del proyecto, puedes cargar tus propios archivos csv con bases de datos similares a las encontradas en este repositorio, pero la carga a los dataframes del proyecto los tendrás que hacer maunualmente.
-Una vez hayas finalizado la ejecución del archivo `PI01_Misael_Garcia_Torres.ipynb` podrás cargar la api de manera local, o hacer un deploy en Render.
-
 <a name="dataengineer"></a>
 
-## Data Engineering
+## Data Analytics
 
 <a name="datos"></a>
 
 ### Repositorio y Conjuntos de Datos
 
-- El repositorio original del proyecto se encuentra disponible en [GitHub](https://github.com/soyHenry/PI_ML_OPS/tree/PT?tab=readme-ov-file).
-- Los conjuntos de datos utilizados se encuentran disponibles en [Google Drive](https://drive.google.com/drive/folders/1HqBG2-sUkz_R3h1dZU5F2uAzpRn7BSpj).
+- El repositorio original del proyecto se encuentra disponible en [GitHub](https://github.com/soyHenry/PF_DS/blob/FULL-TIME/Proyectos/yelp-goople.md).
 
 <a name="preprocesamiento"></a>
 
-### Preprocesamiento y análisis de Datos
+### Preprocesamiento de datos
 
 - Se realiza la carga y limpieza de los conjuntos de datos utilizando Python y las siguientes librerías:
-  - ast
-  - nltk
-  - pandas
   - numpy
-  - matplotlib
-  - wordcloud
-  - sklearn
-  - seaborn
+  - pandas
   
-  puedes revisar más en detalle los pasos realizados dentro del archivo [`PI01_Misael_Garcia_Torres.ipynb`](https://colab.research.google.com/drive/1fNHTxOLO9_OX4gVw3RFdsqvvzBtRrjLS#scrollTo=WKs6ccEbpP9J)
+  puedes revisar más en detalle los pasos realizados dentro del archivo [`ETL.ipynb`](https://github.com/Aspirina180mg/PF_DATAPT07/blob/main/ETL.ipynb)
 
 <a name="descripcion"></a>
 
 ### Descripción del Proyecto
 
-El proyecto se divide en las siguientes secciones principales:
+<a name="analisis"></a>
 
-1. **Exploración de Datos:** Análisis inicial de los conjuntos de datos para comprender su estructura y características.
-2. **Limpieza de Datos:** Proceso de limpieza y preprocesamiento de los datos para eliminar valores nulos, duplicados y realizar correcciones.
-3. **Transformación de Datos:** Conversión de tipos de datos, extracción de información relevante y preparación de los datos para su análisis.
-4. **Análisis de Sentimientos:** Utilización de análisis de sentimientos para evaluar las opiniones de los usuarios en las reseñas de juegos, se utiliza la librería nltk y el vader_lexicon
-5. **Generación de Reportes:** Creación de visualizaciones y reportes estadísticos para identificar patrones y tendencias en los datos.
+## Análisis de datos
 
-<a name="funciones"></a>
+### **Análisis Monovariados**
 
-## Funciones de la API
+### **Análisis Bivariados**
 
-El proyecto también incluye la implementación de una API para proporcionar acceso a datos procesados y funcionalidades específicas. Esta fue desarrollada en el archivo `main.py`.
-Las principales funciones de la API incluyen:
+<a name="kpis"></a>
 
-1. **PlayTimeGenre():** Devuelve el año con más horas jugadas para un género específico.
-2. **UserForGenre():** Devuelve el usuario con más horas jugadas para un género específicoy el detalle de la acumulación de horas anual para este usuario.
-3. **UsersRecommend():** Devuelve un top 3 con los juegos más recomendados por usuarios para un año dado.
-4. **UsersNotRecommend():** Devuelve un top 3 con los juegos menos recomendados por usuarios para un año dado.
-5. **SentimentAnalysis():** devuelve la cantidad de comentarios positivos, neutrales y negativos para un año dado.
-6. **recomendacion_juegos():** Devuelve un top 5 de los juegos similares al juego dado.
-7. **recomendacion_usuario():** Devuelve un top 5 de los juegos recomendados para el usuario dado.
+## KPIs
 
-para más información se puede consultar la documentación de la api en :
-[https://pi01-misael-garcia-torres.onrender.com/docs](https://pi01-misael-garcia-torres.onrender.com/docs)
+<a name="dashboard"></a>
 
-<a name="deploy"></a>
-
-## Deployment
-La API puede ser probada en local utilizando uvicorn con el siguiente comando dentro de la carpeta raíz del proyecto:
-
-```bash
-uvicorn main:app --reload
-```
-
-la API está deployada en Render, cada modificación hecha en el archivo `main.py` se verá de forma automática en uvicorn, pero debe ser actualizada manualmente en el Deploy de Render.
-
-<a name="archivos"></a>
-
-## Archivos Generados
-
-El proyecto genera un archivo para cada función de la API, con datos preprocesados y resultados de análisis para su consulta.
-
-- `df_PlayTimeGenre`: tiene la estructura {genero,año}
-- `df_UserForGenre`: tiene la estructura {genero,user_id,año,horas_jugadas}
-- `df_UsersRecommend`: tiene la estructura {año,puesto,juego}
-- `df_UsersNotRecommend`: tiene la estructura {año,puesto,juego}
-- `df_SentimentAnalysis`: tiene la estructura {año,categoria,cantidad}
-- `df_recomendacion_juegos`: tiene la estructura {id_juego,nombre_juego, puesto, juego}
-- `df_recomendacion_usuario`: tiene la estructura {id_usuario, puesto, juego}
-
-*Nota* los resultados de df_recomendacion_juegos y df_recomendacion_usuario fueron creados aplicando el modelo de similitud del coseno.
-*Nota 2* durante el proceso estándar se desempaquetan los archivos `Diccionario de Datos STEAM.xlsx`, `steam_games.son.gz`, `user_reviews.json.gz` y `user_items.json.gz` en la carpeta `PI MLOps - STEAM`.
+## Pánel de datos o Dashboard
 
 <a name="contribuciones"></a>
 
@@ -149,15 +120,14 @@ Se aceptan contribuciones al proyecto, puede enviar una solicitud de extracción
 
 ## Links
 
-Proyecto Original: https://github.com/soyHenry/PI_ML_OPS/tree/PT?tab=readme-ov-file
-Repositorio: https://github.com/Aspirina180mg/PI01_Misael_Garcia_Torres
-Seguimiento de problemas: https://github.com/Aspirina180mg/PI01_Misael_Garcia_Torres/issues
+Proyecto Original: https://github.com/soyHenry/PF_DS/blob/FULL-TIME/Proyectos/yelp-goople.md
+
+Repositorio: https://github.com/Aspirina180mg/PF_DATAPT07
+
+Seguimiento de problemas: https://github.com/Aspirina180mg/PF_DATAPT07/issues
   - En caso de bugs sensibles como vulnerabilidades de seguridad, por favor
     contacte directamente al correo misagtor@gmail.com en lugar de abrir un 
     problema (issue), esto para agilizar el proceso de resolución.
-Otros repositorios similares:
-    Repositorio de Juan Garate: https://github.com/Batxa/DS_Project1
-    
 
 <a name="licencia"></a>
 
@@ -169,15 +139,52 @@ Este proyecto se distribuye bajo la [licencia MIT](https://choosealicense.com/li
 
 ## Contacto
 
-Para obtener más información o realizar preguntas sobre el proyecto, puedes ponerte en contacto con el autor:
+Para obtener más información o realizar preguntas sobre el proyecto, puedes ponerte en contacto con los miembros del equipo:
 
-- Nombre: Misael García Torres
+José Alcantara
+- Rol: Data Analyst
+- Teléfono: +51 986 564 461
+- Correo Electrónico: 
+- Github: 
+- LinkedIn: 
+
+Javier Begnolea
+- Rol: Data Scientist
+- Teléfono: +54 935 1211 2766
+- Correo Electrónico: [javierbengolea38@gmail.com]
+- Github: [github.com/javierbengolea](https://github.com/javierbengolea)
+- LinkedIn: [linkedin.com/in/javier-bengolea](https://www.linkedin.com/in/javier-bengolea/)
+
+Lucas Colantoni
+- Rol: Data Engineer
+- Teléfono: +54 934 3644 7764
+- Correo Electrónico: [lucascolantoni@hotmailcom]
+- Github: [github.com/Lcolantoni](https://github.com/Lcolantoni)
+- LinkedIn: [linkedin.com/in/lucas-colantoni-39b196153](https://www.linkedin.com/in/lucas-colantoni-39b196153/)
+
+Misael García
+- Rol: Líder de Equipo y Data Engineer
 - Teléfono: +56 931 854 247
-- Correo Electrónico: [misagtor@gmail.com)
-- LinkedIn: [linkedin.com/in/mgarciat](https://www.linkedin.com/in/mgarciat/)
+- Correo Electrónico: [misagtor@gmail.com]
+- Github: [github.com/Aspirina180mg/](https://github.com/Aspirina180mg/)
+- LinkedIn: [linkedin.com/in/mgarciat](https://linkedin.com/in/mgarciat/) 
+
+Luca Monzon
+- Rol: Data Scientist
+- Teléfono: +54 911 3095 0937
+- Correo Electrónico: [lucamonzon2003@gmail.com]
+- Github: [github.com/lucamonzon2003](https://github.com/lucamonzon2003)
+- LinkedIn: [linkedin.com/in/luca-monzon-94aa31238](https://www.linkedin.com/in/luca-monzon-94aa31238/)
+
+Leonardo Moran Leon
+- Rol: Data Scientist
+- Teléfono: +59 39 7869 3382
+- Correo Electrónico: [oel.espol@gmail.com]
+- Github: [github.com/LeonardoMoran19](https://github.com/LeonardoMoran19/)
+- LinkedIn: [linkedin.com/in/leomleon/](https://www.linkedin.com/in/leomleon/)
 
 <a name="menciones"></a>
 
 ## Menciones y agradecimientos
 
-Para la realización de este proyecto se utilizaron los conocimientos adquiridos en el Bootcamp de Data Science del Equipo de "[Henry](https://web.soyhenry.com/about-us)", agradezco también a mis TAs Rafael Alvarez y Roberto Schaefer, quienes me acompañaron durante todo el proceso, son unos cracks, el agradecimiento final va a mi señora Kimberly Moya y a mi hijo Javier García, por apoyarme y aguantarme durante la realziación de este y todos mis proyectos.
+Para la realización de este proyecto se utilizaron los conocimientos adquiridos en el Bootcamp de Data Science del Equipo de "[Henry](https://web.soyhenry.com/about-us)".
