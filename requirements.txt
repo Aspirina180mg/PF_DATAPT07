@@ -1,10 +1,8 @@
-ast
 matplotlib
 nltk
 numpy
 pandas
 plotly
 seaborn
-sklearn
 streamlit
 wordcloud
