@@ -144,11 +144,11 @@ Para obtener más información o realizar preguntas sobre el proyecto, puedes po
 José Alcantara
 - Rol: Data Analyst
 - Teléfono: +51 986 564 461
-- Correo Electrónico: 
-- Github: 
-- LinkedIn: 
+- Correo Electrónico: [jalcantara777@yahoo.com]
+- Github: [github.com/jalcantara777](https://github.com/jalcantara777)
+- LinkedIn: [linkedin.com/in/jalcantara777](https://www.linkedin.com/in/jalcantara777/)
 
-Javier Begnolea
+Javier Bengolea
 - Rol: Data Scientist
 - Teléfono: +54 935 1211 2766
 - Correo Electrónico: [javierbengolea38@gmail.com]
