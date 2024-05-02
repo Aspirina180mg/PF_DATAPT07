@@ -149,6 +149,7 @@ José Alcantara
 - LinkedIn: [linkedin.com/in/jalcantara777](https://www.linkedin.com/in/jalcantara777/)
 
 Javier Bengolea
+Javier Bengolea
 - Rol: Data Scientist
 - Teléfono: +54 935 1211 2766
 - Correo Electrónico: [javierbengolea38@gmail.com](mailto:javierbengolea38@gmail.com)
