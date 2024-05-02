@@ -144,42 +144,42 @@ Para obtener más información o realizar preguntas sobre el proyecto, puedes po
 José Alcantara
 - Rol: Data Analyst
 - Teléfono: +51 986 564 461
-- Correo Electrónico: 
-- Github: 
-- LinkedIn: 
+- Correo Electrónico: [jalcantara777@yahoo.com](mailto:jalcantara777@yahoo.com)
+- Github: [github.com/jalcantara777](https://github.com/jalcantara777)
+- LinkedIn: [linkedin.com/in/jalcantara777](https://www.linkedin.com/in/jalcantara777/)
 
-Javier Begnolea
+Javier Bengolea
 - Rol: Data Scientist
 - Teléfono: +54 935 1211 2766
-- Correo Electrónico: [javierbengolea38@gmail.com]
+- Correo Electrónico: [javierbengolea38@gmail.com](mailto:javierbengolea38@gmail.com)
 - Github: [github.com/javierbengolea](https://github.com/javierbengolea)
 - LinkedIn: [linkedin.com/in/javier-bengolea](https://www.linkedin.com/in/javier-bengolea/)
 
 Lucas Colantoni
 - Rol: Data Engineer
 - Teléfono: +54 934 3644 7764
-- Correo Electrónico: [lucascolantoni@hotmailcom]
+- Correo Electrónico: [lucascolantoni@hotmailcom](mailto:lucascolantoni@hotmailcom)
 - Github: [github.com/Lcolantoni](https://github.com/Lcolantoni)
 - LinkedIn: [linkedin.com/in/lucas-colantoni-39b196153](https://www.linkedin.com/in/lucas-colantoni-39b196153/)
 
 Misael García
 - Rol: Líder de Equipo y Data Engineer
 - Teléfono: +56 931 854 247
-- Correo Electrónico: [misagtor@gmail.com]
+- Correo Electrónico: [misagtor@gmail.com](mailto:misagtor@gmail.com)
 - Github: [github.com/Aspirina180mg/](https://github.com/Aspirina180mg/)
 - LinkedIn: [linkedin.com/in/mgarciat](https://linkedin.com/in/mgarciat/) 
 
 Luca Monzon
 - Rol: Data Scientist
 - Teléfono: +54 911 3095 0937
-- Correo Electrónico: [lucamonzon2003@gmail.com]
+- Correo Electrónico: [lucamonzon2003@gmail.com](mailto:lucamonzon2003@gmail.com)
 - Github: [github.com/lucamonzon2003](https://github.com/lucamonzon2003)
 - LinkedIn: [linkedin.com/in/luca-monzon-94aa31238](https://www.linkedin.com/in/luca-monzon-94aa31238/)
 
 Leonardo Moran Leon
 - Rol: Data Scientist
 - Teléfono: +59 39 7869 3382
-- Correo Electrónico: [oel.espol@gmail.com]
+- Correo Electrónico: [oel.espol@gmail.com](mailto:oel.espol@gmail.com)
 - Github: [github.com/LeonardoMoran19](https://github.com/LeonardoMoran19/)
 - LinkedIn: [linkedin.com/in/leomleon/](https://www.linkedin.com/in/leomleon/)
 
