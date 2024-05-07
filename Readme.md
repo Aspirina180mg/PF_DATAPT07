@@ -141,7 +141,7 @@ Este proyecto se distribuye bajo la [licencia MIT](https://choosealicense.com/li
 
 Para obtener más información o realizar preguntas sobre el proyecto, puedes ponerte en contacto con los miembros del equipo:
 
-José Alcantara
+José Alcántara
 - Rol: Data Analyst
 - Teléfono: +51 986 564 461
 - Correo Electrónico: [jalcantara777@yahoo.com](mailto:jalcantara777@yahoo.com)
