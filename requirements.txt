@@ -3,3 +3,6 @@ nltk
 numpy
 pandas
 seaborn
+wordcloud
+pyarrow
+fastparquet
