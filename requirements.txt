@@ -6,3 +6,5 @@ seaborn
 wordcloud
 pyarrow
 fastparquet
+plotly
+nbformat
