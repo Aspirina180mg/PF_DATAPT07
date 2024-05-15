@@ -3,3 +3,6 @@ Datasets/
 venv/
 Generated/
 merge_changes.sh
+word_cloud_revies.csv
+word_cloud_reviews.*
+fecha_hora.csv

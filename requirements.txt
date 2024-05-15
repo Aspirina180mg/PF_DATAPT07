@@ -8,3 +8,4 @@ pyarrow
 fastparquet
 plotly
 nbformat
+openpyxl
