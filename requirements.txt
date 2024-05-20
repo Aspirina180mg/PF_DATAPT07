@@ -1,5 +1,7 @@
-matplotlib
-nltk
-numpy
+os
 pandas
-seaborn
+numpy
+json
+datetime
+geojson
+shapely.geometry
