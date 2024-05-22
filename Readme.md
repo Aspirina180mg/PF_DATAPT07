@@ -101,10 +101,44 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 ### **Análisis Monovariados**
 
 ### **Análisis Bivariados**
+## Ciclo de vida de los datos
+#### Adquisición de datos:
+- En esta fase, se recolectan datos de diversas fuentes, como bases de datos, APIs, entre otros. Es crucial asegurar la calidad y la integridad de los datos desde su origen.
+#### Limpieza y Preprocesamiento:
+- Los datos adquiridos pueden contener ruido, valores faltantes o datos inconsistentes. En esta etapa, se realiza la limpieza de los datos para eliminar errores y se lleva a cabo el preprocesamiento necesario para prepararlos para su análisis posterior.
+#### Almacenamiento y Gestión:
+- Los datos limpios se almacenan en una infraestructura de almacenamiento adecuada, garantizando su seguridad y accesibilidad. Además, se establecen políticas de gestión de datos para administrar el acceso, la privacidad y la seguridad de los datos.
+#### Análisis Exploratorio de Datos (EDA):
+- En esta fase, se exploran los datos mediante técnicas estadísticas y visuales para comprender su estructura, identificar patrones y tendencias, y detectar posibles relaciones entre las variables.
+#### Modelado y Procesamiento de Datos:
+- Con base en los insights obtenidos durante el análisis exploratorio, se construyen modelos predictivos o descriptivos para extraer información valiosa de los datos. Se utilizan técnicas de aprendizaje automático, minería de datos u otras metodologías.
+#### Interpretación y Comunicación de Resultados:
+- Los resultados del análisis y del modelado se interpretan y se comunican de manera clara y efectiva a las partes interesadas. Se presentan hallazgos importantes, conclusiones y recomendaciones que puedan derivarse del estudio de los datos.
+#### Implementación y Monitoreo:
+- Los modelos desarrollados se implementan en entornos de producción, donde se utilizan para tomar decisiones o automatizar procesos. Se establecen mecanismos de monitoreo continuo para evaluar el rendimiento de los modelos y garantizar su actualización y mantenimiento.
+#### Retención y Eliminación:
+- Se definen políticas de retención de datos para determinar cuánto tiempo se conservarán los datos y en qué condiciones. También se establecen procedimientos para la eliminación segura de los datos cuando ya no sean necesarios o relevantes.
 
 <a name="kpis"></a>
 
 ## KPIs
+### Formulas 
+#### % de Aprobación con respecto al año anterior
+$$
+\[ \text{Promedio de reseñas positivas} = \frac{\text{Número total de reseñas positivas}}{\text{Número total de reseñas}} \]
+$$
+
+$$
+\[ \text{Aumento porcentual} = \left( \frac{\text{Promedio de reseñas positivas del año actual} - \text{Promedio de reseñas positivas del año anterior}}{\text{Promedio de reseñas positivas del año anterior}} \right) \times 100 \]
+$$
+#### % de crecimiento en clientes con respecto al último año
+$$
+\[ \text{Porcentaje de incremento} = \left( \frac{\text{Cantidad de reseñas del año actual} - \text{Cantidad de reseñas del año anterior}}{\text{Cantidad de reseñas del año anterior}} \right) \times 100 \]
+$$
+#### Densidad de locales cada 100.000 habitantes
+$$
+\[ \text{Densidad} = \left( \frac{\text{Número de locales}}{\text{Población}} \right) \times 100000 \]
+$$
 
 <a name="dashboard"></a>
 
