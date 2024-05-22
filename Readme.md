@@ -124,12 +124,21 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 ## KPIs
 ### Formulas 
 #### % de Aprobación con respecto al año anterior
+$$
 \[ \text{Promedio de reseñas positivas} = \frac{\text{Número total de reseñas positivas}}{\text{Número total de reseñas}} \]
+$$
+
+$$
 \[ \text{Aumento porcentual} = \left( \frac{\text{Promedio de reseñas positivas del año actual} - \text{Promedio de reseñas positivas del año anterior}}{\text{Promedio de reseñas positivas del año anterior}} \right) \times 100 \]
+$$
 #### % de crecimiento en clientes con respecto al último año
+$$
 \[ \text{Porcentaje de incremento} = \left( \frac{\text{Cantidad de reseñas del año actual} - \text{Cantidad de reseñas del año anterior}}{\text{Cantidad de reseñas del año anterior}} \right) \times 100 \]
+$$
 #### Densidad de locales cada 100.000 habitantes
-\[ \text{Densidad} = \left( \frac{\text{Numero de locales}}{\text{Poblacion}} \right) \times 100000 \]
+$$
+\[ \text{Densidad} = \left( \frac{\text{Número de locales}}{\text{Población}} \right) \times 100000 \]
+$$
 
 <a name="dashboard"></a>
 
