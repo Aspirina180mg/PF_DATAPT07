@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 [fullname]
+Copyright (c) 2024 PTF DATA
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -18,4 +18,27 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-------------------------
+
+Licencia MIT
+
+Derechos de Autor (c) 2024 PTF DATA
+
+Se concede por la presente, sin costo alguno, a cualquier persona que obtenga una copia
+de este software y los archivos de documentación asociados (el "Software"), para usar
+el Software sin restricción, incluyendo sin limitación los derechos de usar, copiar, modificar,
+fusionar, publicar, distribuir, sublicenciar y/o vender copias del Software, y permitir a las personas
+a las que se les proporcione el Software a hacer lo mismo, sujeto a las siguientes condiciones:
+
+El aviso de derechos de autor anterior y este aviso de permiso deberán ser incluidos en todas
+las copias o porciones sustanciales del Software.
+
+EL SOFTWARE SE PROPORCIONA "TAL CUAL", SIN GARANTÍA DE NINGÚN TIPO, EXPRESA O
+IMPLÍCITA, INCLUYENDO PERO NO LIMITADO A LAS GARANTÍAS DE COMERCIABILIDAD,
+IDONEIDAD PARA UN PROPÓSITO PARTICULAR E INCUMPLIMIENTO. EN NINGÚN CASO SERÁN
+LOS AUTORES O LOS TITULARES DEL COPYRIGHT RESPONSABLES POR NINGUNA RECLAMACIÓN, DAÑOS U OTRA
+RESPONSABILIDAD, YA SEA EN UNA ACCIÓN CONTRACTUAL, AGRAVIO O DE OTRO TIPO, QUE SURJA DE,
+FUERA O EN CONEXIÓN CON EL SOFTWARE O EL USO U OTRO TIPO DE TRATOS EN EL
 SOFTWARE.

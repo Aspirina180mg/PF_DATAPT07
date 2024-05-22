@@ -1,6 +1,14 @@
+datetime
+fastparquet
+fuzzywuzzy
+geojson
 matplotlib
+nbformat
 nltk
-numpy
+openpyxl
 pandas
+plotly
+pyarrow
 seaborn
-geopandas
+shapely
+wordcloud
