@@ -9,4 +9,3 @@ Datawarehouse/estados.parquet
 Datawarehouse/restaurantes.parquet
 Datawarehouse/reviews.parquet
 ETL_viejo.ipynb
-airflow
