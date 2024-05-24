@@ -62,25 +62,25 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 
 ---
 
-`<a name="ejecutar"></a>`
+<a name="ejecutar"></a>
 
 ## Cómo Ejecutar el Proyecto
 
-`<a name="usorapido"></a>`
+<a name="usorapido"></a>
 
 ## Guía de uso rápido
 
-`<a name="dataengineer"></a>`
+<a name="dataengineer"></a>
 
 ## Data Analytics
 
-`<a name="datos"></a>`
+<a name="datos"></a>
 
 ### Repositorio y Conjuntos de Datos
 
 - El repositorio original del proyecto se encuentra disponible en [GitHub](https://github.com/soyHenry/PF_DS/blob/FULL-TIME/Proyectos/yelp-goople.md).
 
-`<a name="preprocesamiento"></a>`
+<a name="preprocesamiento"></a>
 
 ### Preprocesamiento de datos
 
@@ -91,11 +91,11 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 
   puedes revisar más en detalle los pasos realizados dentro del archivo [`ETL.ipynb`](https://github.com/Aspirina180mg/PF_DATAPT07/blob/main/ETL.ipynb)
 
-`<a name="descripcion"></a>`
+<a name="descripcion"></a>
 
 ### Descripción del Proyecto
 
-`<a name="analisis"></a>`
+<a name="analisis"></a>
 
 ## Análisis de datos
 
@@ -141,7 +141,7 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 
 <img src="images/Data_lifecycle_detail.png" alt="Ciclo de vida de los datos en general" style="width:100%; max-width:800px;">
 
-`<a name="kpis"></a>`
+<a name="kpis"></a>
 
 ## KPIs
 
@@ -149,20 +149,20 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 
 <img src="images/KPI_formulas.png" alt="Fórmulas KPIs" style="width:100%; max-width:800px;">
 
-`<a name="dashboard"></a>`
+<a name="dashboard"></a>
 
 ## Panel de datos o Dashboard (Mockup)
 
 <img src="images/Dashboard_mockup1.png" alt="Maqueta del dashboard" style="width:100%; max-width:800px;">
 <img src="images/Dashboard_mockup2.png" alt="Maqueta del dashboard" style="width:100%; max-width:800px;">
 
-`<a name="contribuciones"></a>`
+<a name="contribuciones"></a>
 
 ## Contribuciones y Colaboraciones
 
 Se aceptan contribuciones al proyecto, puede enviar una solicitud de extracción (pull request) o abrir un problema (issue) en el repositorio de GitHub.
 
-`<a name="links"></a>`
+<a name="links"></a>
 
 ## Links
 
@@ -176,13 +176,13 @@ Seguimiento de problemas: https://github.com/Aspirina180mg/PF_DATAPT07/issues
   contacte directamente al correo misagtor@gmail.com en lugar de abrir un
   problema (issue), esto para agilizar el proceso de resolución.
 
-`<a name="licencia"></a>`
+<a name="licencia"></a>
 
 ## Licencia
 
 Este proyecto se distribuye bajo la [licencia MIT](https://choosealicense.com/licenses/mit/). Consulta el archivo `LICENSE.txt` para obtener más detalles.
 
-`<a name="contacto"></a>`
+<a name="contacto"></a>
 
 ## Contacto
 
@@ -236,7 +236,7 @@ Leonardo Morán León
 - Github: [github.com/LeonardoMoran19](https://github.com/LeonardoMoran19/)
 - LinkedIn: [linkedin.com/in/leomleon/](https://www.linkedin.com/in/leomleon/)
 
-`<a name="menciones"></a>`
+<a name="menciones"></a>
 
 ## Menciones y agradecimientos
 
