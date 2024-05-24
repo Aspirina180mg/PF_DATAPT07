@@ -1,6 +1,8 @@
 Datasets/
 .venv/
-venv/
 word_cloud_revies.csv
 word_cloud_reviews.*
 fecha_hora.csv
+Datasets/
+Datawarehouse/
+Datalake/

@@ -55,7 +55,7 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
     3. [Descripción del Proyecto](#descripcion)
 4. [Análisis de datos](#analisis)
 5. [KPIs](#kpis)
-6. [Pánel de control o Dashboard](#dashboard)
+6. [Panel de control o Dashboard](#dashboard)
 7. [Contribuciones y Colaboraciones](#contribuciones)
 8. [Links](#links)
 9. [Licencia](#licencia)
@@ -102,6 +102,11 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 
 ### **Análisis Bivariados**
 ## Ciclo de vida de los datos
+<<<<<<< HEAD
+<img src="images/Data_lifecycle_overview.png"  alt="Ciclo de vida de los datos en general" style="width:100%; max-width:800px;">
+
+=======
+>>>>>>> 565d2c71e7f734713699513f6e6dab6d03d37525
 #### Adquisición de datos:
 - En esta fase, se recolectan datos de diversas fuentes, como bases de datos, APIs, entre otros. Es crucial asegurar la calidad y la integridad de los datos desde su origen.
 #### Limpieza y Preprocesamiento:
@@ -118,10 +123,19 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 - Los modelos desarrollados se implementan en entornos de producción, donde se utilizan para tomar decisiones o automatizar procesos. Se establecen mecanismos de monitoreo continuo para evaluar el rendimiento de los modelos y garantizar su actualización y mantenimiento.
 #### Retención y Eliminación:
 - Se definen políticas de retención de datos para determinar cuánto tiempo se conservarán los datos y en qué condiciones. También se establecen procedimientos para la eliminación segura de los datos cuando ya no sean necesarios o relevantes.
+<<<<<<< HEAD
+
+<img src="images/Data_lifecycle_detail.png" alt="Ciclo de vida de los datos en general" style="width:100%; max-width:800px;">
+=======
+>>>>>>> 565d2c71e7f734713699513f6e6dab6d03d37525
 
 <a name="kpis"></a>
 
 ## KPIs
+<<<<<<< HEAD
+### Fórmulas 
+<img src="images/KPI_formulas.png" alt="Fórmulas KPIs" style="width:100%; max-width:800px;">
+=======
 ### Formulas 
 #### % de Aprobación con respecto al año anterior
 $$
@@ -139,10 +153,13 @@ $$
 $$
 \[ \text{Densidad} = \left( \frac{\text{Número de locales}}{\text{Población}} \right) \times 100000 \]
 $$
+>>>>>>> 565d2c71e7f734713699513f6e6dab6d03d37525
 
 <a name="dashboard"></a>
 
-## Pánel de datos o Dashboard
+## Panel de datos o Dashboard
+
+<img src="images/Dashboard_mockup.png" alt="Maqueta del dashboard" style="width:100%; max-width:800px;">
 
 <a name="contribuciones"></a>
 
@@ -204,14 +221,14 @@ Misael García
 - Github: [github.com/Aspirina180mg/](https://github.com/Aspirina180mg/)
 - LinkedIn: [linkedin.com/in/mgarciat](https://linkedin.com/in/mgarciat/) 
 
-Luca Monzon
+Luca Monzón
 - Rol: Data Scientist
 - Teléfono: +54 911 3095 0937
 - Correo Electrónico: [lucamonzon2003@gmail.com](mailto:lucamonzon2003@gmail.com)
 - Github: [github.com/lucamonzon2003](https://github.com/lucamonzon2003)
 - LinkedIn: [linkedin.com/in/luca-monzon-94aa31238](https://www.linkedin.com/in/luca-monzon-94aa31238/)
 
-Leonardo Moran Leon
+Leonardo Morán León
 - Rol: Data Scientist
 - Teléfono: +59 39 7869 3382
 - Correo Electrónico: [oel.espol@gmail.com](mailto:oel.espol@gmail.com)
