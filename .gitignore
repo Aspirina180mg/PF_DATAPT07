@@ -1,11 +1,8 @@
 Datasets/
 .venv/
-venv/
 word_cloud_revies.csv
 word_cloud_reviews.*
 fecha_hora.csv
+Datasets/
 Datawarehouse/
-Datawarehouse/estados.parquet
-Datawarehouse/restaurantes.parquet
-Datawarehouse/reviews.parquet
-ETL_viejo.ipynb
+Datalake/
