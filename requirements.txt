@@ -12,3 +12,5 @@ pyarrow
 seaborn
 shapely
 wordcloud
+textblob
+sqlalchemy
