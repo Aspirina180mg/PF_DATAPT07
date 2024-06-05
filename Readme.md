@@ -43,6 +43,7 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 <img src="images\Equipo.png" alt="Equipo de Trabajo" style="width:100%; max-width:800px;">
 
 
+
 # Tabla de contenidos
 
 1. [Cómo Ejecutar el Proyecto](#ejecutar)
@@ -54,11 +55,12 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 4. [Análisis de datos](#analisis)
 5. [KPIs](#kpis)
 6. [Panel de control o Dashboard](#dashboard)
-7. [Contribuciones y Colaboraciones](#contribuciones)
-8. [Links](#links)
-9. [Licencia](#licencia)
-10. [Contacto](#contacto)
-11. [Menciones y agradecimientos](#menciones)
+7. [Presentaciones Demo](#presentacion)
+8. [Contribuciones y Colaboraciones](#contribuciones)
+9. [Links](#links)
+10. [Licencia](#licencia)
+11. [Contacto](#contacto)
+12. [Menciones y agradecimientos](#menciones)
 
 ---
 
@@ -89,7 +91,7 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
   - numpy
   - pandas
 
-  puedes revisar más en detalle los pasos realizados dentro del archivo [`ETL.ipynb`](https://github.com/Aspirina180mg/PF_DATAPT07/blob/main/ETL.ipynb)
+  puedes revisar más en detalle los pasos realizados dentro del archivo [`ETL DL.ipynb`](https://github.com/Aspirina180mg/PF_DATAPT07/blob/main/ETL.ipynb) donde preparamos los datods para insertarlos en el DataLake y luego el archivo [`ETL DW.ipynb`](https://github.com/Aspirina180mg/PF_DATAPT07/blob/main/ETL.ipynb) donde se trabaja sobre los archivos del DataLake para su inserción en el DataWarehouse
 
 <a name="descripcion"></a>
 
@@ -151,11 +153,50 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 
 <a name="dashboard"></a>
 
-## Panel de datos o Dashboard (Mockup)
+## Panel de datos o Dashboard
 
 <img src="images/Dashboard_mockup1.png" alt="Maqueta del dashboard" style="width:100%; max-width:800px;">
 <img src="images/Dashboard_mockup2.png" alt="Maqueta del dashboard" style="width:100%; max-width:800px;">
 
+<a name="presentacion"></a>
+
+## Presentaciones Demo
+
+Habiendo tres sprints, se realizaron dos demos y una presentacion final
+
+La [Primera Demo](https://docs.google.com/presentation/d/1kllELVOXvwlRdvCouHrlqKcEPhd5HiIF/edit#slide=id.g2e00532ecfe_0_117) consta de 16 diapositivas, donde se puede encontrar la siguiente informacion:
+- diapositivias 1 a 3: presentación del equipo y contexto del proyecto
+- diapositivas 4 y 5: propuestas y objetivos
+- diapositiva 6: presentación de KPIs
+- diapositiva 7: esquema de alcance y clientes
+- diapositiva 8: esquema de un primer EDA y el estado de los datos
+- diapositiva 9 y 10: primeros insights
+- diapositiva 11: stack tecnólogico
+- diapositiva 12 y 13: Mostración de Flujo de trabajo y presentacion dinamica Github
+- diapositiva 14: Metodología de Trabajo a seguir
+- diapositiva 15 y 16: finalización y saludos
+
+La [Segunda Demo](https://docs.google.com/presentation/d/1iX4MuHME64CMS082lhlNmgBDQOiGoYiX/edit#slide=id.p2) consta de 26 diapositivas:
+- diapositivas 1 a 4: mostración EDA y mockup de dashboard con primeras medidas de KPIs
+- diapositivas 5 y 6: formulas de cálculo de los 4 KPIs
+- diapositivas 7 y 8: introducción y primer insight de Machine Learning
+- diapositiva 9: Ciclo de vida del dato
+- diapositivas 10 a 14: explicacion y mostraciones del data warehouse
+- diapositivas 15 a 20: explicacion y mostraciones del data lake junto con la carga incremental
+- diapositiva 21: modelo de entidad/relación
+- diapositivas 22 a 24: diagrama de gant y reparticion de tareas
+- diapositivas 25 a 26: finalización y saludos
+
+La [Entrega final](https://docs.google.com/presentation/d/1iX4MuHME64CMS082lhlNmgBDQOiGoYiX/edit#slide=id.p2) consta de 26 diapositivas y un [Dashboard](https://drive.google.com/file/d/1V5M6TXCvHtnHsBEfjsqwrRDfrPCzGrmn/view?usp=drive_link):
+- diapositivas 1 a 4: mostración EDA y mockup de dashboard con primeras medidas de KPIs
+- diapositivas 5 y 6: formulas de cálculo de los 4 KPIs
+- diapositivas 7 y 8: introducción y primer insight de Machine Learning
+- diapositiva 9: Ciclo de vida del dato
+- diapositivas 10 a 14: explicacion y mostraciones del data warehouse
+- diapositivas 15 a 20: explicacion y mostraciones del data lake junto con la carga incremental
+- diapositiva 21: modelo de entidad/relación
+- diapositivas 22 a 24: diagrama de gant y reparticion de tareas
+- diapositivas 25 a 26: finalización y saludos
 <a name="contribuciones"></a>
 
 ## Contribuciones y Colaboraciones
