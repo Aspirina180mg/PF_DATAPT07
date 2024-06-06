@@ -5,7 +5,6 @@ import pickle
 st.set_page_config(layout="wide")
 st.title("Restaurantes y Caraterísticas")
 
-
 # Datos proporcionados
 @st.cache_data
 def read_data():
@@ -15,9 +14,7 @@ def read_data():
     modelo = pickle.load(open(filename, "rb"))
     return X_subway, X_subway_proc, modelo
 
-
 X_subway, X_subway_proc, modelo = read_data()
-
 
 def get_atributos(id_restaurante):
     df = X_subway.query(f"id_restaurante == '{id_restaurante}'")
@@ -40,17 +37,15 @@ def get_atributos(id_restaurante):
         atributos_dict[ta][a] = df.loc[:, f"{ta}_{a}"].values[0]
     return atributos_dict
 
-
 @st.cache
 def cargar_datos():
     X_subway = pd.read_parquet("ML/X_subway.parquet")
     return X_subway
 
-
 X_subway = cargar_datos()
 
 # Dropdown con los id_restaurante
-id_restaurantes = X_subway["id_restaurante"].tolist()
+id_restaurantes = X_subway['id_restaurante'].tolist()
 selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes)
 
 # Generar enlace solo si se modifica el dropdown
@@ -58,9 +53,7 @@ enlace = f"https://ptf-data-subway.streamlit.app/?id={selected_id}"
 
 # Redirigir automáticamente después de seleccionar un elemento en el dropdown
 if selected_id:
-    st.markdown(
-        f'<meta http-equiv="refresh" content="0;URL={enlace}">', unsafe_allow_html=True
-    )
+    st.markdown(f'<meta http-equiv="refresh" content="0;URL={enlace}">', unsafe_allow_html=True)
 
 muestra = X_subway.query(f"id_restaurante == '{st.query_params['id']}'")
 
