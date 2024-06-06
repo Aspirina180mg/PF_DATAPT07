@@ -39,7 +39,7 @@ def get_atributos(id_restaurante):
 
 # Dropdown con los id_restaurante
 id_restaurantes = X_subway['id_restaurante'].tolist()
-selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes, width=300)
+selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes)
 
 # Generar enlace con el formato especificado
 enlace = f"<a href='https://ptf-data-subway.streamlit.app/?id={selected_id}' target='_self'>Enlace a restaurante</a>"
