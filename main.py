@@ -42,9 +42,9 @@ id_restaurantes = X_subway['id_restaurante'].tolist()
 selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes)
 
 # Generar enlace con el formato especificado
-enlace = f"<a href='https://ptf-data-subway.streamlit.app/?id={selected_id}' target='_self'>Enlace</a>"
+enlace = f"<a href='https://ptf-data-subway.streamlit.app/?id={selected_id}' target='_self'>Enlace a restaurante</a>"
 
-st.write("Enlace:", enlace, unsafe_allow_html=True)
+st.write(enlace, unsafe_allow_html=True)
 
 muestra = X_subway.query(f"id_restaurante == '{st.query_params['id']}'")
 
