@@ -44,16 +44,30 @@ def cargar_datos():
 
 X_subway = cargar_datos()
 
+import streamlit as st
+import pandas as pd
+import urllib.parse
+
+@st.cache
+def cargar_datos():
+    X_subway = pd.read_parquet("ML/X_subway.parquet")
+    return X_subway
+
+X_subway = cargar_datos()
+
+# Obtener el ID del URL si está presente
+url = st.experimental_get_query_params()
+selected_id = url.get('id', [None])[0]
+
 # Dropdown con los id_restaurante
 id_restaurantes = X_subway['id_restaurante'].tolist()
-selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes)
+selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes, index=id_restaurantes.index(selected_id) if selected_id in id_restaurantes else 0)
 
-# Generar enlace solo si se modifica el dropdown
+# Generar enlace
 enlace = f"https://ptf-data-subway.streamlit.app/?id={selected_id}"
 
-# Redirigir automáticamente después de seleccionar un elemento en el dropdown
-if selected_id:
-    st.markdown(f'<meta http-equiv="refresh" content="0;URL={enlace}">', unsafe_allow_html=True)
+# Mostrar enlace
+st.write("Enlace:", enlace)
 
 muestra = X_subway.query(f"id_restaurante == '{st.query_params['id']}'")
 
