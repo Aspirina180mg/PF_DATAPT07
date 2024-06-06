@@ -46,7 +46,7 @@ with col1:
 
 with col3:
     # Generar enlace con el formato especificado
-    enlace = f"<a href='https://ptf-data-subway.streamlit.app/?id={selected_id}' target='_self'>Click aquí para cambiar restaurante</a>"
+    enlace = f"<a href='https://ptf-data-subway.streamlit.app/?id={selected_id}' target='_self'>Enlace</a>"
     st.write("Enlace:", enlace)
 
 muestra = X_subway.query(f"id_restaurante == '{st.query_params['id']}'")
