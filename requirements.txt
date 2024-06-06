@@ -14,3 +14,6 @@ shapely
 wordcloud
 textblob
 sqlalchemy
+streamlit
+scikit-learn
+xgboost
