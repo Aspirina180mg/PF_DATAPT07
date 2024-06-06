@@ -37,22 +37,17 @@ def get_atributos(id_restaurante):
         atributos_dict[ta][a] = df.loc[:, f"{ta}_{a}"].values[0]
     return atributos_dict
 
-# Crear dos columnas, una para el dropdown y otra para el enlace
 col1, col2 = st.columns([1, 2])
 
-# Dropdown con los id_restaurante
-# Colocar el dropdown en la primera columna (1/3 del espacio)
 with col1:
+    # Dropdown con los id_restaurante
     id_restaurantes = X_subway['id_restaurante'].tolist()
     selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes)
 
-# Generar enlace con el formato especificado
-enlace = f"<a href='https://ptf-data-subway.streamlit.app/?id={selected_id}' target='_self'>Enlace a restaurante</a>"
-
-# Colocar el enlace en la segunda columna (2/3 del espacio)
 with col2:
-    st.write(enlace, unsafe_allow_html=True)
-
+    # Generar enlace con el formato especificado
+    enlace = f"<a href='https://ptf-data-subway.streamlit.app/?id={selected_id}' target='_self'></a>"
+    st.write("Enlace:", enlace)
 
 muestra = X_subway.query(f"id_restaurante == '{st.query_params['id']}'")
 
