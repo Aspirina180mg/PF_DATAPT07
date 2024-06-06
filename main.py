@@ -137,23 +137,30 @@ def get_atributos(id_restaurante):
 
     return atributos_dict
 
-# Dropdown con los id_restaurante
-id_restaurantes = X_subway['id_restaurante'].tolist()
-selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes)
+def cargar_pagina_con_id_seleccionado(X_subway):
+    # Dropdown con los id_restaurante
+    id_restaurantes = X_subway['id_restaurante'].tolist()
+    selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes)
 
-# Agregar parámetro de consulta al URL actual
-query_params = st.experimental_get_query_params()
-query_params['id'] = selected_id
+    # Agregar parámetro de consulta al URL actual
+    query_params = st.experimental_get_query_params()
+    query_params['id'] = selected_id
 
-# Obtener el URL base actual
-base_url = st.experimental_get_query_params()['url'][0]
+    # Obtener el URL base actual
+    base_url = query_params['url'][0]
 
-# Actualizar el URL con el nuevo ID seleccionado
-new_url = f"{base_url}?id={selected_id}"
+    # Actualizar el URL con el nuevo ID seleccionado
+    new_url = f"{base_url}?id={selected_id}"
 
-# Redirigir a la nueva URL
-st.experimental_set_query_params(**query_params)
-st.experimental_rerun()
+    # Redirigir a la nueva URL
+    st.experimental_set_query_params(**query_params)
+    st.experimental_rerun()
+
+# Uso de la función
+cargar_pagina_con_id_seleccionado(X_subway)
+
+
+
 
 st.write("Enlace:", enlace)
 
