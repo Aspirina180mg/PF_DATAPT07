@@ -39,9 +39,14 @@ def get_atributos(id_restaurante):
 
 # Dropdown con los id_restaurante
 id_restaurantes = X_subway['id_restaurante'].tolist()
-selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes, index=id_restaurantes.index("gi90NMmRhzl8vzM83UNOVA"))
+selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes)
 
-muestra = X_subway.query(f"id_restaurante == '{selected_id}'")
+# Generar enlace con el formato especificado
+enlace = f"https://ptf-data-subway.streamlit.app/?id={selected_id}"
+
+st.write("Enlace:", enlace)
+
+muestra = X_subway.query(f"id_restaurante == '{st.query_params['id']}'")
 
 # st.dataframe(X_subway_proc.loc[muestra.index])
 calificacion = {0: "😢 Mala", 1: "😀 Buena"}
@@ -81,7 +86,7 @@ with st.form("atributos_form"):
         t_pay,
         t_popular,
         t_service,
-    ) = st.columns(11)
+    ) = st.tabs([i for i in nombres_atributo.values()])
 
     with t_access:
         c_access = st.container()
