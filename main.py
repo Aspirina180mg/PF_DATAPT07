@@ -39,14 +39,14 @@ def get_atributos(id_restaurante):
 
 # Dropdown con los id_restaurante
 id_restaurantes = X_subway['id_restaurante'].tolist()
-selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes)
+selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes, index=id_restaurantes.index("gi90NMmRhzl8vzM83UNOVA") if "gi90NMmRhzl8vzM83UNOVA" in id_restaurantes else 0)
 
 # Generar enlace con el formato especificado
 enlace = f"https://ptf-data-subway.streamlit.app/?id={selected_id}"
 
 st.write("Enlace:", enlace)
 
-muestra = X_subway.query(f"id_restaurante == '{st.query_params['id']}'")
+muestra = X_subway.query(f"id_restaurante == '{selected_id}'")
 
 # st.dataframe(X_subway_proc.loc[muestra.index])
 calificacion = {0: "😢 Mala", 1: "😀 Buena"}
@@ -105,6 +105,83 @@ with st.form("atributos_form"):
                     "Wheelchair accessible restroom"
                     "Wheelchair accessible seating"
                     "Wheelchair accessible elevator"
+                with col_2b:
+                    for tipo_atributo in data_2[prefix].items():
+                        check_key = f"{prefix}_{tipo_atributo[0]}"
+                        is_checked = col_2b.checkbox(
+                            "",
+                            key=check_key,
+                            value=bool(data_2[prefix][tipo_atributo[0]]),
+                        )
+                        submited_data[check_key] = int(is_checked)
+
+    with t_amen:
+        c_amen = st.container()
+
+        with c_amen:
+            prefix = "amen"
+            col1, col2 = st.columns([1, 3])
+
+            with col1:
+                nombres_atributo["amen"]
+            with col2:
+                col_2a, col_2b = st.columns(2)
+                with col_2a:
+                    "Bar on site"
+                    "Gender-neutral restroom"
+                    "Good for kids"
+                    "High chairs"
+                    "Restroom"
+                    "Wi-Fi"
+
+                with col_2b:
+                    for tipo_atributo in data_2[prefix].items():
+                        check_key = f"{prefix}_{tipo_atributo[0]}"
+                        is_checked = col_2b.checkbox(
+                            "",
+                            key=check_key,
+                            value=bool(data_2[prefix][tipo_atributo[0]]),
+                        )
+                        submited_data[check_key] = int(is_checked)
+
+    with t_atmos:
+        c_atmos = st.container()
+        with c_atmos:
+            prefix = "atmos"
+            col1, col2 = st.columns([1, 3])
+
+            with col1:
+                nombres_atributo[prefix]
+            with col2:
+                col_2a, col_2b = st.columns(2)
+                with col_2a:
+                    for tipo_atributo in data_2[prefix].items():
+                        st.write(f"{tipo_atributo[0]}")
+
+                with col_2b:
+                    for tipo_atributo in data_2[prefix].items():
+                        check_key = f"{prefix}_{tipo_atributo[0]}"
+                        is_checked = col_2b.checkbox(
+                            "",
+                            key=check_key,
+                            value=bool(data_2[prefix][tipo_atributo[0]]),
+                        )
+                        submited_data[check_key] = int(is_checked)
+
+    with t_crowd:
+        c_crowd = st.container()
+        with c_crowd:
+            prefix = "crowd"
+            col1, col2 = st.columns([1, 3])
+
+            with col1:
+                nombres_atributo[prefix]
+            with col2:
+                col_2a, col_2b = st.columns(2)
+                with col_2a:
+                    for tipo_atributo in data_2[prefix].items():
+                        st.write(f"{tipo_atributo[0]}")
+
                 with col_2b:
                     for tipo_atributo in data_2[prefix].items():
                         check_key = f"{prefix}_{tipo_atributo[0]}"
