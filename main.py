@@ -138,31 +138,34 @@ def get_atributos(id_restaurante):
     return atributos_dict
 
 def cargar_pagina_con_id_seleccionado(X_subway):
+    # Obtener el ID seleccionado de la URL actual, si está presente
+    query_params = st.experimental_get_query_params()
+    selected_id = query_params.get('id', [''])[0]
+
     # Dropdown con los id_restaurante
     id_restaurantes = X_subway['id_restaurante'].tolist()
-    selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes)
 
-    # Agregar parámetro de consulta al URL actual
-    query_params = st.experimental_get_query_params()
-    query_params['id'] = selected_id
+    # Si el ID seleccionado está presente en la lista, seleccionarlo
+    if selected_id in id_restaurantes:
+        selected_index = id_restaurantes.index(selected_id)
+    else:
+        selected_index = 0  # Por defecto, seleccionar el primer elemento
 
-    # Obtener el URL base actual
-    base_url = query_params['url'][0]
+    selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes, index=selected_index)
 
-    # Actualizar el URL con el nuevo ID seleccionado
-    new_url = f"{base_url}?id={selected_id}"
+    # Si el ID seleccionado cambia, actualizar la página
+    if selected_id != query_params.get('id', [''])[0]:
+        query_params['id'] = [selected_id]
 
-    # Redirigir a la nueva URL
-    st.experimental_set_query_params(**query_params)
-    st.experimental_rerun()
+        # Actualizar el URL con el nuevo ID seleccionado
+        new_url = st.url_builder._add_query_params_to_url(query_params)
+
+        # Redirigir a la nueva URL
+        st.experimental_set_query_params(**query_params)
+        st.experimental_rerun()
 
 # Uso de la función
 cargar_pagina_con_id_seleccionado(X_subway)
-
-
-
-
-st.write("Enlace:", enlace)
 
 muestra = X_subway.query(f"id_restaurante == '{st.query_params['id']}'")
 
