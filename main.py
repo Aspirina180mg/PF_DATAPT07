@@ -3,9 +3,7 @@ import pandas as pd
 import pickle
 
 st.set_page_config(layout="wide")
-
 st.title("Restaurantes y Caraterísticas")
-
 
 # Datos proporcionados
 @st.cache_data
@@ -16,16 +14,9 @@ def read_data():
     modelo = pickle.load(open(filename, "rb"))
     return X_subway, X_subway_proc, modelo
 
-
 X_subway, X_subway_proc, modelo = read_data()
 
-# st.dataframe(X_subway)
-
-
-
-
 def get_atributos(id_restaurante):
-
     df = X_subway.query(f"id_restaurante == '{id_restaurante}'")
     tipo_atributo = [a.split("_")[0] for a in df.columns.tolist()[1:70]]
     atributo = [a.split("_")[1] for a in df.columns.tolist()[1:70]]
@@ -42,10 +33,8 @@ def get_atributos(id_restaurante):
         "popular": {},
         "service": {},
     }
-
     for ta, a in zip(tipo_atributo, atributo):
         atributos_dict[ta][a] = df.loc[:, f"{ta}_{a}"].values[0]
-
     return atributos_dict
 
 # Dropdown con los id_restaurante
@@ -59,11 +48,6 @@ st.write("Enlace:", enlace)
 
 muestra = X_subway.query(f"id_restaurante == '{st.query_params['id']}'")
 
-
-# st.write(muestra.drop(columns=['index']))
-
-# st.write(muestra['id_restaurante'].iloc[0])
-
 # st.dataframe(X_subway_proc.loc[muestra.index])
 calificacion = {0: "😢 Mala", 1: "😀 Buena"}
 
@@ -72,11 +56,6 @@ st.write(
     muestra["calificacion"].iloc[0],
 )
 
-
-# a = pd.DataFrame(np.array([['female',1,65.8,18,0,0,'C']]),columns = x_train.columns)
-
-
-# pprint(get_atributos("0x865681564f2dfd47:0x1f030438f1ceed23"))
 data_2 = get_atributos(muestra["id_restaurante"].iloc[0])
 
 nombres_atributo = {
@@ -92,8 +71,6 @@ nombres_atributo = {
     "popular": "Popular for",
     "service": "Services",
 }
-
-# st.write(data_2)
 
 with st.form("atributos_form"):
     submited_data = {}
