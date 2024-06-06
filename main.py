@@ -137,32 +137,14 @@ def get_atributos(id_restaurante):
 
     return atributos_dict
 
-def cargar_pagina_con_id_seleccionado(X_subway):
-    # Obtener el ID seleccionado de la URL actual, si está presente
-    selected_id = st.experimental_get_query_params().get('id', [''])[0]
+# Dropdown con los id_restaurante
+id_restaurantes = X_subway['id_restaurante'].tolist()
+selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes)
 
-    # Dropdown con los id_restaurante
-    id_restaurantes = X_subway['id_restaurante'].tolist()
+# Generar enlace con el formato especificado
+enlace = f"https://ptf-data-subway.streamlit.app/?id={selected_id}"
 
-    # Si el ID seleccionado está presente en la lista, seleccionarlo
-    if selected_id in id_restaurantes:
-        selected_index = id_restaurantes.index(selected_id)
-    else:
-        selected_index = 0  # Por defecto, seleccionar el primer elemento
-
-    selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes, index=selected_index)
-
-    # Si el ID seleccionado cambia, actualizar la página
-    if selected_id != st.experimental_get_query_params().get('id', [''])[0]:
-        # Actualizar el URL con el nuevo ID seleccionado
-        new_url = st.url_builder.set_query_params(id=selected_id)
-
-        # Redirigir a la nueva URL
-        st.experimental_set_query_params(id=selected_id)
-        st.experimental_rerun()
-
-# Uso de la función
-cargar_pagina_con_id_seleccionado(X_subway)
+st.write("Enlace:", enlace)
 
 muestra = X_subway.query(f"id_restaurante == '{st.query_params['id']}'")
 
