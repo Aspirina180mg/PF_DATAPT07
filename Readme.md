@@ -42,8 +42,6 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 
 <img src="images\Equipo.png" alt="Equipo de Trabajo" style="width:100%; max-width:800px;">
 
-
-
 # Tabla de contenidos
 
 1. [Cómo Ejecutar el Proyecto](#ejecutar)
@@ -64,25 +62,25 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 
 ---
 
-<a name="ejecutar"></a>
+`<a name="ejecutar"></a>`
 
 ## Cómo Ejecutar el Proyecto
 
-<a name="usorapido"></a>
+`<a name="usorapido"></a>`
 
 ## Guía de uso rápido
 
-<a name="dataengineer"></a>
+`<a name="dataengineer"></a>`
 
 ## Data Analytics
 
-<a name="datos"></a>
+`<a name="datos"></a>`
 
 ### Repositorio y Conjuntos de Datos
 
 - El repositorio original del proyecto se encuentra disponible en [GitHub](https://github.com/soyHenry/PF_DS/blob/FULL-TIME/Proyectos/yelp-goople.md).
 
-<a name="preprocesamiento"></a>
+`<a name="preprocesamiento"></a>`
 
 ### Preprocesamiento de datos
 
@@ -93,11 +91,11 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 
   puedes revisar más en detalle los pasos realizados dentro del archivo [`ETL DL.ipynb`](https://github.com/Aspirina180mg/PF_DATAPT07/blob/main/ETL.ipynb) donde preparamos los datods para insertarlos en el DataLake y luego el archivo [`ETL DW.ipynb`](https://github.com/Aspirina180mg/PF_DATAPT07/blob/main/ETL.ipynb) donde se trabaja sobre los archivos del DataLake para su inserción en el DataWarehouse
 
-<a name="descripcion"></a>
+`<a name="descripcion"></a>`
 
 ### Descripción del Proyecto
 
-<a name="analisis"></a>
+`<a name="analisis"></a>`
 
 ## Análisis de datos
 
@@ -143,7 +141,7 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 
 <img src="images/Data_lifecycle_detail.png" alt="Ciclo de vida de los datos en general" style="width:100%; max-width:800px;">
 
-<a name="kpis"></a>
+`<a name="kpis"></a>`
 
 ## KPIs
 
@@ -151,20 +149,31 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 
 <img src="images/KPI_formulas.png" alt="Fórmulas KPIs" style="width:100%; max-width:800px;">
 
-<a name="dashboard"></a>
+`<a name="dashboard"></a>`
 
 ## Panel de datos o Dashboard
 
 <img src="images/Dashboard_mockup1.png" alt="Maqueta del dashboard" style="width:100%; max-width:800px;">
 <img src="images/Dashboard_mockup2.png" alt="Maqueta del dashboard" style="width:100%; max-width:800px;">
 
-<a name="presentacion"></a>
+El siguiente enlace lleva al dashboard interactivo: [Dashboard](https://app.powerbi.com/view?r=eyJrIjoiZTU0NjcyMmUtODg1ZC00MWVmLTg0OGUtMmY0OTI3M2EzYjc0IiwidCI6Ijc1MDRlMzE4LThlMWUtNGQ1NS1iZmZkLTg3NWI0ZGVlODI2MCIsImMiOjR9&embedImagePlaceholder=true&pageName=c4ea6585a17c3b1d63b5)
+
+EL archivo local se encuentra en la carpeta "Dashboard".
+
+## Modelo de Machine Learning
+
+Se puede consultar la información entregada por el modelo en el siguiente enlace: [Streamlit](https://ptf-data-subway.streamlit.app/?id=0x865681564f2dfd47:0x1f030438f1ceed23)
+
+Al seleccionar el id de restaurante en el dropdown, luego se debe dar click al enlace para visualizar la información el nuevo restaurante seleccionado
+
+`<a name="presentacion"></a>`
 
 ## Presentaciones Demo
 
 Habiendo tres sprints, se realizaron dos demos y una presentacion final
 
 La [Primera Demo](https://docs.google.com/presentation/d/1kllELVOXvwlRdvCouHrlqKcEPhd5HiIF/edit#slide=id.g2e00532ecfe_0_117) consta de 16 diapositivas, donde se puede encontrar la siguiente informacion:
+
 - diapositivias 1 a 3: presentación del equipo y contexto del proyecto
 - diapositivas 4 y 5: propuestas y objetivos
 - diapositiva 6: presentación de KPIs
@@ -177,6 +186,7 @@ La [Primera Demo](https://docs.google.com/presentation/d/1kllELVOXvwlRdvCouHrlqK
 - diapositiva 15 y 16: finalización y saludos
 
 La [Segunda Demo](https://docs.google.com/presentation/d/1iX4MuHME64CMS082lhlNmgBDQOiGoYiX/edit#slide=id.p2) consta de 26 diapositivas:
+
 - diapositivas 1 a 4: mostración EDA y mockup de dashboard con primeras medidas de KPIs
 - diapositivas 5 y 6: formulas de cálculo de los 4 KPIs
 - diapositivas 7 y 8: introducción y primer insight de Machine Learning
@@ -188,6 +198,7 @@ La [Segunda Demo](https://docs.google.com/presentation/d/1iX4MuHME64CMS082lhlNmg
 - diapositivas 25 a 26: finalización y saludos
 
 La [Entrega final](https://docs.google.com/presentation/d/1iX4MuHME64CMS082lhlNmgBDQOiGoYiX/edit#slide=id.p2) consta de 26 diapositivas y un [Dashboard](https://drive.google.com/file/d/1V5M6TXCvHtnHsBEfjsqwrRDfrPCzGrmn/view?usp=drive_link):
+
 - diapositivas 1 a 4: mostración EDA y mockup de dashboard con primeras medidas de KPIs
 - diapositivas 5 y 6: formulas de cálculo de los 4 KPIs
 - diapositivas 7 y 8: introducción y primer insight de Machine Learning
@@ -197,13 +208,13 @@ La [Entrega final](https://docs.google.com/presentation/d/1iX4MuHME64CMS082lhlNm
 - diapositiva 21: modelo de entidad/relación
 - diapositivas 22 a 24: diagrama de gant y reparticion de tareas
 - diapositivas 25 a 26: finalización y saludos
-<a name="contribuciones"></a>
+  `<a name="contribuciones"></a>`
 
 ## Contribuciones y Colaboraciones
 
 Se aceptan contribuciones al proyecto, puede enviar una solicitud de extracción (pull request) o abrir un problema (issue) en el repositorio de GitHub.
 
-<a name="links"></a>
+`<a name="links"></a>`
 
 ## Links
 
@@ -217,13 +228,13 @@ Seguimiento de problemas: https://github.com/Aspirina180mg/PF_DATAPT07/issues
   contacte directamente al correo misagtor@gmail.com en lugar de abrir un
   problema (issue), esto para agilizar el proceso de resolución.
 
-<a name="licencia"></a>
+`<a name="licencia"></a>`
 
 ## Licencia
 
 Este proyecto se distribuye bajo la [licencia MIT](https://choosealicense.com/licenses/mit/). Consulta el archivo `LICENSE.txt` para obtener más detalles.
 
-<a name="contacto"></a>
+`<a name="contacto"></a>`
 
 ## Contacto
 
@@ -277,7 +288,7 @@ Leonardo Morán León
 - Github: [github.com/LeonardoMoran19](https://github.com/LeonardoMoran19/)
 - LinkedIn: [linkedin.com/in/leomleon/](https://www.linkedin.com/in/leomleon/)
 
-<a name="menciones"></a>
+`<a name="menciones"></a>`
 
 ## Menciones y agradecimientos
 
