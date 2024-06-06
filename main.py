@@ -37,41 +37,18 @@ def get_atributos(id_restaurante):
         atributos_dict[ta][a] = df.loc[:, f"{ta}_{a}"].values[0]
     return atributos_dict
 
-@st.cache
-def cargar_datos():
-    X_subway = pd.read_parquet("ML/X_subway.parquet")
-    return X_subway
-
-X_subway = cargar_datos()
-
-import streamlit as st
-import pandas as pd
-import urllib.parse
-
-@st.cache
-def cargar_datos():
-    X_subway = pd.read_parquet("ML/X_subway.parquet")
-    return X_subway
-
-X_subway = cargar_datos()
-
-# Obtener el ID del URL si está presente
-url = st.experimental_get_query_params()
-selected_id = url.get('id', [None])[0]
-
 # Dropdown con los id_restaurante
 id_restaurantes = X_subway['id_restaurante'].tolist()
-selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes, index=id_restaurantes.index(selected_id) if selected_id in id_restaurantes else 0)
+selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes, index=id_restaurantes.index("gi90NMmRhzl8vzM83UNOVA"))
 
-# Generar enlace
+# Generar enlace con el formato especificado
 enlace = f"https://ptf-data-subway.streamlit.app/?id={selected_id}"
 
 # Mostrar enlace
 st.write("Enlace:", enlace)
 
-muestra = X_subway.query(f"id_restaurante == '{st.query_params['id']}'")
+muestra = X_subway.query(f"id_restaurante == '{selected_id}'")
 
-# st.dataframe(X_subway_proc.loc[muestra.index])
 calificacion = {0: "😢 Mala", 1: "😀 Buena"}
 
 st.write(
@@ -109,11 +86,10 @@ with st.form("atributos_form"):
         t_pay,
         t_popular,
         t_service,
-    ) = st.tabs([i for i in nombres_atributo.values()])
+    ) = st.columns(11)
 
     with t_access:
         c_access = st.container()
-
         with c_access:
             prefix = "access"
             col1, col2 = st.columns([1, 3])
@@ -140,7 +116,6 @@ with st.form("atributos_form"):
 
     with t_amen:
         c_amen = st.container()
-
         with c_amen:
             prefix = "amen"
             col1, col2 = st.columns([1, 3])
@@ -208,183 +183,3 @@ with st.form("atributos_form"):
                 with col_2b:
                     for tipo_atributo in data_2[prefix].items():
                         check_key = f"{prefix}_{tipo_atributo[0]}"
-                        is_checked = col_2b.checkbox(
-                            "",
-                            key=check_key,
-                            value=bool(data_2[prefix][tipo_atributo[0]]),
-                        )
-                        submited_data[check_key] = int(is_checked)
-    with t_dining:
-        c_dining = st.container()
-        with c_dining:
-            prefix = "dining"
-            col1, col2 = st.columns([1, 3])
-
-            with col1:
-                nombres_atributo[prefix]
-            with col2:
-                col_2a, col_2b = st.columns(2)
-                with col_2a:
-                    for tipo_atributo in data_2[prefix].items():
-                        st.write(f"{tipo_atributo[0]}")
-
-                with col_2b:
-                    for tipo_atributo in data_2[prefix].items():
-                        check_key = f"{prefix}_{tipo_atributo[0]}"
-                        is_checked = col_2b.checkbox(
-                            "",
-                            key=check_key,
-                            value=bool(data_2[prefix][tipo_atributo[0]]),
-                        )
-                        submited_data[check_key] = int(is_checked)
-    with t_health:
-        c_health = st.container()
-        with c_health:
-            prefix = "health"
-            col1, col2 = st.columns([1, 3])
-
-            with col1:
-                nombres_atributo[prefix]
-            with col2:
-                col_2a, col_2b = st.columns(2)
-                with col_2a:
-                    for tipo_atributo in data_2[prefix].items():
-                        st.write(f"{tipo_atributo[0]}")
-
-                with col_2b:
-                    for tipo_atributo in data_2[prefix].items():
-                        check_key = f"{prefix}_{tipo_atributo[0]}"
-                        is_checked = col_2b.checkbox(
-                            "",
-                            key=check_key,
-                            value=bool(data_2[prefix][tipo_atributo[0]]),
-                        )
-                        submited_data[check_key] = int(is_checked)
-    with t_high:
-        c_high = st.container()
-        with c_high:
-            prefix = "high"
-            col1, col2 = st.columns([1, 3])
-
-            with col1:
-                nombres_atributo[prefix]
-            with col2:
-                col_2a, col_2b = st.columns(2)
-                with col_2a:
-                    for tipo_atributo in data_2[prefix].items():
-                        st.write(f"{tipo_atributo[0]}")
-
-                with col_2b:
-                    for tipo_atributo in data_2[prefix].items():
-                        check_key = f"{prefix}_{tipo_atributo[0]}"
-                        is_checked = col_2b.checkbox(
-                            "",
-                            key=check_key,
-                            value=bool(data_2[prefix][tipo_atributo[0]]),
-                        )
-                        submited_data[check_key] = int(is_checked)
-    with t_offer:
-        c_offer = st.container()
-        with c_offer:
-            prefix = "offer"
-            col1, col2 = st.columns([1, 3])
-
-            with col1:
-                nombres_atributo[prefix]
-            with col2:
-                col_2a, col_2b = st.columns(2)
-                with col_2a:
-                    for tipo_atributo in data_2[prefix].items():
-                        st.write(f"{tipo_atributo[0]}")
-
-                with col_2b:
-                    for tipo_atributo in data_2[prefix].items():
-                        check_key = f"{prefix}_{tipo_atributo[0]}"
-                        is_checked = col_2b.checkbox(
-                            "",
-                            key=check_key,
-                            value=bool(data_2[prefix][tipo_atributo[0]]),
-                        )
-                        submited_data[check_key] = int(is_checked)
-
-    with t_pay:
-        c_pay = st.container()
-        with c_pay:
-            prefix = "pay"
-            col1, col2 = st.columns([1, 3])
-
-            with col1:
-                nombres_atributo[prefix]
-            with col2:
-                col_2a, col_2b = st.columns(2)
-                with col_2a:
-                    for tipo_atributo in data_2[prefix].items():
-                        st.write(f"{tipo_atributo[0]}")
-
-                with col_2b:
-                    for tipo_atributo in data_2[prefix].items():
-                        check_key = f"{prefix}_{tipo_atributo[0]}"
-                        is_checked = col_2b.checkbox(
-                            "",
-                            key=check_key,
-                            value=bool(data_2[prefix][tipo_atributo[0]]),
-                        )
-                        submited_data[check_key] = int(is_checked)
-    with t_popular:
-        c_popular = st.container()
-        with c_popular:
-            prefix = "popular"
-            col1, col2 = st.columns([1, 3])
-
-            with col1:
-                nombres_atributo[prefix]
-            with col2:
-                col_2a, col_2b = st.columns(2)
-                with col_2a:
-                    for tipo_atributo in data_2[prefix].items():
-                        st.write(f"{tipo_atributo[0]}")
-
-                with col_2b:
-                    for tipo_atributo in data_2[prefix].items():
-                        check_key = f"{prefix}_{tipo_atributo[0]}"
-                        is_checked = col_2b.checkbox(
-                            "",
-                            key=check_key,
-                            value=bool(data_2[prefix][tipo_atributo[0]]),
-                        )
-                        submited_data[check_key] = int(is_checked)
-    with t_service:
-        c_service = st.container()
-        with c_service:
-            prefix = "service"
-            col1, col2 = st.columns([1, 3])
-
-            with col1:
-                nombres_atributo[prefix]
-            with col2:
-                col_2a, col_2b = st.columns(2)
-                with col_2a:
-                    for tipo_atributo in data_2[prefix].items():
-                        st.write(f"{tipo_atributo[0]}")
-
-                with col_2b:
-                    for tipo_atributo in data_2[prefix].items():
-                        check_key = f"{prefix}_{tipo_atributo[0]}"
-                        is_checked = col_2b.checkbox(
-                            "",
-                            key=check_key,
-                            value=bool(data_2[prefix][tipo_atributo[0]]),
-                        )
-                        submited_data[check_key] = int(is_checked)
-
-    submitted = st.form_submit_button("Evaluar")
-
-    if submitted:
-        df = pd.DataFrame([submited_data])
-        X_subway_proc.iloc[muestra.index, 0:69] = df.iloc[0, 0:69]
-        actualizado = X_subway_proc.iloc[muestra.index].copy()
-        st.write(calificacion[int(muestra["calificacion"].iloc[0] >= 4.02)])
-        st.write("Luego de las modificaciones: ")
-        st.write(calificacion[modelo.predict(actualizado)[0]])
-        if modelo.predict(actualizado)[0] > 0:
-            st.balloons()
