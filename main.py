@@ -37,6 +37,11 @@ def get_atributos(id_restaurante):
         atributos_dict[ta][a] = df.loc[:, f"{ta}_{a}"].values[0]
     return atributos_dict
 
+# Dividir el espacio horizontalmente
+col1, col2 = st.columns([1, 3])
+
+col2.write("Enlace:", enlace)
+
 # Dropdown con los id_restaurante
 id_restaurantes = X_subway['id_restaurante'].tolist()
 selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes)
