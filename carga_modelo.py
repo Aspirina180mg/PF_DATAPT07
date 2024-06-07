@@ -326,7 +326,7 @@ def preprocess_data(data_frame):
 
     df = pd.concat([df, union[columnas_restaurante]], axis=1)
 
-    drop_col = ['id_estado','categorias','cantidad_resenas','latitud','longitud','atributos','calificacion','origen']
+    drop_col = ['categorias','cantidad_resenas','latitud','longitud','atributos','calificacion','origen']
 
     # df.query("nombre == 'Subway'").drop(columns=drop_col).to_csv("preprocess_subway.csv")
     # print(df.sample(3))
@@ -386,7 +386,7 @@ def preprocess_data(data_frame):
     #     if queries:
     #         f.write("INSERT INTO atributos VALUES " + ", ".join(queries) + ";\n")
 
-    df.to_csv("df.csv")
+    # df.to_csv("df.csv")
 
     fig = sns.boxplot(df_restaurantes['calificacion'])
     fig.plot()
@@ -411,37 +411,21 @@ def preprocess_data(data_frame):
 
 X, y = preprocess_data(df_restaurantes)
 
-X.to_csv("X.csv")
-y.to_csv("y.csv")
+def probar():
+    # import pickle
 
-# X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
+    # Ruta al archivo pickle
+    file_path = 'modelo_91.pickle'
 
-# # scalers = [StandardScaler(), MaxAbsScaler(), MinMaxScaler()]
-# # classifiers = [RandomForestClassifier(), LogisticRegression(), HistGradientBoostingClassifier(max_iter=100, learning_rate=0.1),
-# #     XGBClassifier(use_label_encoder=False, eval_metric='logloss'), KNeighborsClassifier(), GradientBoostingClassifier()]
-
-# # for s in scalers:
-# #     for c in classifiers:
-# #         print(f"Scaler: {s.__class__.__name__}, Classifier: {c.__class__.__name__}")
-# #         pipe = Pipeline([('scaler', s), ('clasiffier', c)], verbose=True)
-# #         pipe.fit(X_train, y_train)  # apply scaling on training data
-# #         # scores["HistGradientBoostingClassifier"] = pipe.score(X_test, y_test)
-# #         # Print the accuracy score
-# #         score = pipe.score(X_test, y_test)
-# #         print(f"Accuracy: {score:.4f}")
-
-# #         if score >= 0.745:
-# #             cm = confusion_matrix(y_test, pipe.predict(X_test))
-# #             disp = ConfusionMatrixDisplay(confusion_matrix=cm)
-# #             disp.plot(cmap='Blues')
-# #             # disp = ConfusionMatrixDisplay.from_estimator(c, X_test, y_test, cmap='viridis', display_labels=pipe.classes_)
-# #             # disp.plot()
-# #             plt.title(f"Confusion Matrix - {s.__class__.__name__} + {c.__class__.__name__}")
-# #             plt.show()
-# # print(classification_report(y_test, pipe.predict(X_test)))
+    # Abre el archivo en modo lectura binaria
+    with open(file_path, 'rb') as file:
+        # Carga el contenido del archivo
+        data = pickle.load(file)
 
 
+    print("Leemos un modelo de machine learning y lo implementamos")
 
-# # y_pred = loaded_pipeline.predict(X_test)
-# # accuracy = accuracy_score(y_test, y_pred)
-# # print(f"Test accuracy: {accuracy:.2f}")
+    loaded_pipeline = joblib.load(file_path)
+
+    print(loaded_pipeline.predict(X.sample(25)))
+
