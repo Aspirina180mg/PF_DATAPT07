@@ -39,6 +39,18 @@ def read_data():
 
 X_subway, X_subway_proc, modelo = read_data()
 
+# Dropdown para seleccionar id_restaurante
+col1, col2 = st.columns([1, 2])
+
+with col1:
+    # Dropdown con los id_restaurante
+    id_restaurantes = X_subway['id_restaurante'].tolist()
+    selected_id = st.selectbox("Seleccionar ID de Restaurante", id_restaurantes)
+
+with col2:
+    # Generar enlace con el formato especificado
+    enlace = f"https://ptf-data-subway.streamlit.app/?id={selected_id}"
+    st.write("Enlace a restaurante:", enlace)
 
 def get_atributos(id_restaurante):    
     df = X_subway.query(f"id_restaurante == '{id_restaurante}'")
