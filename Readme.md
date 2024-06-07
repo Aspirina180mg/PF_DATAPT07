@@ -53,12 +53,13 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 4. [Análisis de datos](#analisis)
 5. [KPIs](#kpis)
 6. [Panel de control o Dashboard](#dashboard)
-7. [Presentaciones Demo](#presentacion)
-8. [Contribuciones y Colaboraciones](#contribuciones)
-9. [Links](#links)
-10. [Licencia](#licencia)
-11. [Contacto](#contacto)
-12. [Menciones y agradecimientos](#menciones)
+7. [Modelo de Machine Learning](#machine)
+8. [Presentaciones Demo](#presentacion)
+9. [Contribuciones y Colaboraciones](#contribuciones)
+10. [Links](#links)
+11. [Licencia](#licencia)
+12. [Contacto](#contacto)
+13. [Menciones y agradecimientos](#menciones)
 
 ---
 
@@ -160,6 +161,7 @@ El siguiente enlace lleva al dashboard interactivo: [Dashboard](https://app.powe
 
 EL archivo local se encuentra en la carpeta "Dashboard".
 
+`<a name="ml"></a>`
 ## Modelo de Machine Learning
 
 Se puede consultar la información entregada por el modelo en el siguiente enlace: [Streamlit](https://ptf-data-subway.streamlit.app/?id=0x865681564f2dfd47:0x1f030438f1ceed23)
