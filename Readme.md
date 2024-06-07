@@ -42,46 +42,11 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 
 <img src="images\Equipo.png" alt="Equipo de Trabajo" style="width:100%; max-width:800px;">
 
-# Tabla de contenidos
-
-1. [Cómo Ejecutar el Proyecto](#ejecutar)
-2. [Guía de uso rápido](#usorapido)
-3. [Data Analytics](#dataengineer)
-   1. [Repositorio y Conjuntos de Datos](#datos)
-   2. [Preprocesamiento de Datos](#preprocesamiento)
-   3. [Descripción del Proyecto](#descripcion)
-4. [Análisis de datos](#analisis)
-5. [KPIs](#kpis)
-6. [Panel de control o Dashboard](#dashboard)
-7. [Modelo de Machine Learning](#machine)
-8. [Presentaciones Demo](#presentacion)
-9. [Contribuciones y Colaboraciones](#contribuciones)
-10. [Links](#links)
-11. [Licencia](#licencia)
-12. [Contacto](#contacto)
-13. [Menciones y agradecimientos](#menciones)
-
----
-
-`<a name="ejecutar"></a>`
-
-## Cómo Ejecutar el Proyecto
-
-`<a name="usorapido"></a>`
-
-## Guía de uso rápido
-
-`<a name="dataengineer"></a>`
-
-## Data Analytics
-
-`<a name="datos"></a>`
+# Data Analytics
 
 ### Repositorio y Conjuntos de Datos
 
 - El repositorio original del proyecto se encuentra disponible en [GitHub](https://github.com/soyHenry/PF_DS/blob/FULL-TIME/Proyectos/yelp-goople.md).
-
-`<a name="preprocesamiento"></a>`
 
 ### Preprocesamiento de datos
 
@@ -92,11 +57,7 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 
   puedes revisar más en detalle los pasos realizados dentro del archivo [`ETL DL.ipynb`](https://github.com/Aspirina180mg/PF_DATAPT07/blob/main/ETL.ipynb) donde preparamos los datods para insertarlos en el DataLake y luego el archivo [`ETL DW.ipynb`](https://github.com/Aspirina180mg/PF_DATAPT07/blob/main/ETL.ipynb) donde se trabaja sobre los archivos del DataLake para su inserción en el DataWarehouse
 
-`<a name="descripcion"></a>`
-
 ### Descripción del Proyecto
-
-`<a name="analisis"></a>`
 
 ## Análisis de datos
 
@@ -142,15 +103,11 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 
 <img src="images/Data_lifecycle_detail.png" alt="Ciclo de vida de los datos en general" style="width:100%; max-width:800px;">
 
-`<a name="kpis"></a>`
-
 ## KPIs
 
 ### Fórmulas
 
 <img src="images/KPI_formulas.png" alt="Fórmulas KPIs" style="width:100%; max-width:800px;">
-
-`<a name="dashboard"></a>`
 
 ## Panel de datos o Dashboard
 
@@ -161,62 +118,76 @@ El siguiente enlace lleva al dashboard interactivo: [Dashboard](https://app.powe
 
 EL archivo local se encuentra en la carpeta "Dashboard".
 
-`<a name="ml"></a>`
 ## Modelo de Machine Learning
 
 Se puede consultar la información entregada por el modelo en el siguiente enlace: [Streamlit](https://ptf-data-subway.streamlit.app/?id=0x865681564f2dfd47:0x1f030438f1ceed23)
 
+![1717785299679](image/Readme/1717785299679.png)
+
 Al seleccionar el id de restaurante en el dropdown, luego se debe dar click al enlace para visualizar la información el nuevo restaurante seleccionado
 
-`<a name="presentacion"></a>`
+#### Objetivo
 
-## Presentaciones Demo
+El objetivo es tomar las características de todos los restaurantes y entrenar un modelo que pueda predecir la calificación, como negativa o positiva.
+En nuestro proyecto de restaurantes Subway se utiliza este modelo para poder inferir qué atributos debemos cambiar para mejorar la calificación de negativa a positiva.
 
-Habiendo tres sprints, se realizaron dos demos y una presentacion final
+#### Preprocesamiento
 
-La [Primera Demo](https://docs.google.com/presentation/d/1kllELVOXvwlRdvCouHrlqKcEPhd5HiIF/edit#slide=id.g2e00532ecfe_0_117) consta de 16 diapositivas, donde se puede encontrar la siguiente informacion:
+Se busca el promedio de calificaciones y se establece como umbral para determinar si son positivas o negativas.
+Se eligen las features consideradas más representativas y con más información disponible.
+Se hace un balanceo con las salidas, para que los "sí" y los "no" tengan la misma cantidad de registros en el entrenamiento.
 
-- diapositivias 1 a 3: presentación del equipo y contexto del proyecto
-- diapositivas 4 y 5: propuestas y objetivos
-- diapositiva 6: presentación de KPIs
-- diapositiva 7: esquema de alcance y clientes
-- diapositiva 8: esquema de un primer EDA y el estado de los datos
-- diapositiva 9 y 10: primeros insights
-- diapositiva 11: stack tecnólogico
-- diapositiva 12 y 13: Mostración de Flujo de trabajo y presentacion dinamica Github
-- diapositiva 14: Metodología de Trabajo a seguir
-- diapositiva 15 y 16: finalización y saludos
+#### Prueba de Regresores
 
-La [Segunda Demo](https://docs.google.com/presentation/d/1iX4MuHME64CMS082lhlNmgBDQOiGoYiX/edit#slide=id.p2) consta de 26 diapositivas:
+Al ser un problema de clasificación dicotómica se prueba la eficiencia de diferentes algoritmos: `<code>`Regresión Logística, RandomForest, HistGradientBoosting, XGBClassifier, Kneighbors, GradientBoosting `</code>`; con diferentes escaladores: `<code>`StandardScaler, MaxAbsScaler, MinMaxScaler `</code>`.
+Con el criterio de que la combinación de escalador y regresor que tenga más 75% de precisión se elige la combinación de ``XGBClassifier``y como regresor ``Standard Scaler``.
 
-- diapositivas 1 a 4: mostración EDA y mockup de dashboard con primeras medidas de KPIs
-- diapositivas 5 y 6: formulas de cálculo de los 4 KPIs
-- diapositivas 7 y 8: introducción y primer insight de Machine Learning
-- diapositiva 9: Ciclo de vida del dato
-- diapositivas 10 a 14: explicacion y mostraciones del data warehouse
-- diapositivas 15 a 20: explicacion y mostraciones del data lake junto con la carga incremental
-- diapositiva 21: modelo de entidad/relación
-- diapositivas 22 a 24: diagrama de gant y reparticion de tareas
-- diapositivas 25 a 26: finalización y saludos
+Mejores parámetros
 
-La [Entrega final](https://docs.google.com/presentation/d/1iX4MuHME64CMS082lhlNmgBDQOiGoYiX/edit#slide=id.p2) consta de 26 diapositivas y un [Dashboard](https://drive.google.com/file/d/1V5M6TXCvHtnHsBEfjsqwrRDfrPCzGrmn/view?usp=drive_link):
+```python
+{'colsample_bytree': 0.85, 
+'learning_rate': 0.05, 
+'max_depth': 9, 
+'n_estimators': 250, 
+'subsample': 0.8}
+```
 
-- diapositivas 1 a 4: mostración EDA y mockup de dashboard con primeras medidas de KPIs
-- diapositivas 5 y 6: formulas de cálculo de los 4 KPIs
-- diapositivas 7 y 8: introducción y primer insight de Machine Learning
-- diapositiva 9: Ciclo de vida del dato
-- diapositivas 10 a 14: explicacion y mostraciones del data warehouse
-- diapositivas 15 a 20: explicacion y mostraciones del data lake junto con la carga incremental
-- diapositiva 21: modelo de entidad/relación
-- diapositivas 22 a 24: diagrama de gant y reparticion de tareas
-- diapositivas 25 a 26: finalización y saludos
-  `<a name="contribuciones"></a>`
+Mejor cross-validation score: ``0.760407``
+
+Mejor Precisión ``0.76``
+
+Con esos parámetros entremanos el modelo y conseguimos:
+
+    precision    recall  f1-score   support
+         0         0.89      0.93      0.91      9672
+         1         0.93      0.89      0.91      9906
+
+Con una precisión de: 91 %
+
+![1717784740704](image/Readme/1717784740704.png)
+
+#### Implementación
+
+Con este modelo podemos implementar una predicción, tomado un restaurante y sus características, cuáles modificar para pasar de una calificación negativa a positiva.
+Enlace: [Link Streamlit](https://ptf-restaurants-ia.streamlit.app/?id=0x8869a1416d8fd145:0x5d51304c2f5b6910)
+
+![1717784761997](image/Readme/1717784761997.png)
+
+Clicamos sugerir, esperamos unos segundos y:
+
+![1717784786187](image/Readme/1717784786187.png)
+
+Aplicando las características
+
+![1717784801655](image/Readme/1717784801655.png)
+
+Luego Evaluamos
+
+![1717784820526](image/Readme/1717784820526.png)
 
 ## Contribuciones y Colaboraciones
 
 Se aceptan contribuciones al proyecto, puede enviar una solicitud de extracción (pull request) o abrir un problema (issue) en el repositorio de GitHub.
-
-`<a name="links"></a>`
 
 ## Links
 
@@ -230,13 +201,9 @@ Seguimiento de problemas: https://github.com/Aspirina180mg/PF_DATAPT07/issues
   contacte directamente al correo misagtor@gmail.com en lugar de abrir un
   problema (issue), esto para agilizar el proceso de resolución.
 
-`<a name="licencia"></a>`
-
 ## Licencia
 
 Este proyecto se distribuye bajo la [licencia MIT](https://choosealicense.com/licenses/mit/). Consulta el archivo `LICENSE.txt` para obtener más detalles.
-
-`<a name="contacto"></a>`
 
 ## Contacto
 
@@ -289,8 +256,6 @@ Leonardo Morán León
 - Correo Electrónico: [oel.espol@gmail.com](mailto:oel.espol@gmail.com)
 - Github: [github.com/LeonardoMoran19](https://github.com/LeonardoMoran19/)
 - LinkedIn: [linkedin.com/in/leomleon/](https://www.linkedin.com/in/leomleon/)
-
-`<a name="menciones"></a>`
 
 ## Menciones y agradecimientos
 
