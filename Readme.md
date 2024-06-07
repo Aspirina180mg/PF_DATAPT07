@@ -106,7 +106,7 @@ Este proyecto será desarrollado por un equipo multidisciplinario de expertos en
 <img src="images/Dashboard_mockup1.png" alt="Maqueta del dashboard" style="width:100%; max-width:800px;">
 <img src="images/Dashboard_mockup2.png" alt="Maqueta del dashboard" style="width:100%; max-width:800px;">
 
-El siguiente enlace lleva al dashboard interactivo: [Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYzEyOTkxZWQtNzU5ZS00MzY0LTk0M2MtNWE2ODhjOTc0OWRlIiwidCI6Ijc1MDRlMzE4LThlMWUtNGQ1NS1iZmZkLTg3NWI0ZGVlODI2MCIsImMiOjR9&embedImagePlaceholder=true&pageName=c4ea6585a17c3b1d63b5 )
+El siguiente enlace lleva al dashboard interactivo: [Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYzEyOTkxZWQtNzU5ZS00MzY0LTk0M2MtNWE2ODhjOTc0OWRlIiwidCI6Ijc1MDRlMzE4LThlMWUtNGQ1NS1iZmZkLTg3NWI0ZGVlODI2MCIsImMiOjR9&embedImagePlaceholder=true&pageName=c4ea6585a17c3b1d63b5)
 
 EL archivo local se encuentra en la carpeta "Dashboard".
 
@@ -114,7 +114,7 @@ EL archivo local se encuentra en la carpeta "Dashboard".
 
 Se puede consultar la información entregada por el modelo en el siguiente enlace: [Streamlit](https://ptf-data-subway.streamlit.app/?id=0x865681564f2dfd47:0x1f030438f1ceed23)
 
-![1717785299679](image/Readme/1717785299679.png)
+![1717785299679](images/Streamlit.png)
 
 Al seleccionar el id de restaurante en el dropdown, luego se debe dar click al enlace para visualizar la información el nuevo restaurante seleccionado
 
